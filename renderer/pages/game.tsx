@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import GameHeader from "../components/game/GameHeader";
+import GameArena from "../components/game/GameArena";
 
 const Game = () => {
   const searchParams = useSearchParams();
@@ -15,6 +16,7 @@ const Game = () => {
   return (
     <div>
       <GameHeader GameMode={selectedMode} teamNumber={teamNumber} />
+      <GameArena />
     </div>
   );
 };
