@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import questions from "../../store/test.json";
 
 const getRandomQuestion = (currentPart: string) => {
+  if (!questions[currentPart] || questions[currentPart].length === 0) {
+    console.log("Hmm, very weird");
+    return null;
+  }
   const lengthOfPart = questions[currentPart]?.length;
   const randNo = Math.floor(Math.random() * lengthOfPart);
   return questions[currentPart][randNo];
@@ -23,10 +27,16 @@ const GameArena = () => {
       console.log(count);
     } else {
       setCount(1);
-      setCurrentPart(`part${partNum}`);
+      setPartNum(partNum + 1);
+      setCurrentPart(`part${partNum + 1}`);
+      setquestion(getRandomQuestion(`part${partNum + 1}`));
       console.log(count + "false else");
     }
   };
+
+  if (!question) {
+    return <div>No questions available</div>;
+  }
 
   return (
     <div className="bg-gray-700 w-full h-[85vh] flex flex-col items-center p-4 gap-4 justify-between">
