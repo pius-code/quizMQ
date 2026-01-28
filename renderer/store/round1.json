@@ -1,0 +1,50 @@
+{
+  "part1": [
+    {
+      "id": "1",
+      "question": "What is the powerhouse of the cell?",
+      "answer": "Mitochondrion"
+    },
+    {
+      "id": "2",
+      "question": "Give the names of the two main major components of cement",
+      "answer": "Ca2SiO4 (Calcium silicate) and CaAl2O4 (Calcium aluminate)"
+    }
+  ],
+  "part2": [
+    {
+      "id": "3",
+      "question": "Name the main source of the calcium in the clinker and what process or processes does raw material goes through during the formation of clinker",
+      "answer": "The main sources of the calcium is limestone or calcium carbonate and during the process it decomposes to calcium oxide during the heating and then the calcium oxide reacts with silica or aluminium oxide or aluminium hydroxide to form the trioxosilicate and dioxoaluminate"
+    },
+    {
+      "id": "4",
+      "question": "Give the names of the two main major components of cement",
+      "answer": "Ca2SiO4 (Calcium silicate) and CaAl2O4 (Calcium aluminate)"
+    }
+  ],
+  "part3": [
+    {
+      "id": "5",
+      "question": "Differentiate y = (2x - 3) / (x + 1)",
+      "answer": "dy/dx = 5/(x + 1)2"
+    },
+    {
+      "id": "6",
+      "question": "Differentiate y = (x + 2) / (2x - 1)",
+      "answer": "dy/dx = -5/ (2x - 1)2"
+    }
+  ],
+  "part4": [
+    {
+      "id": "7",
+      "question": "A cylinder of mass 0.200kg and moment of inertia 0.250kg/m2 slides and rolls on a horizontal surface. Find the kinetic energy of the cylinder for the given translational speed V and angular speed Ω. FOR V = 4.00m/s and = Ω = 2.00rad/s",
+      "answer": "1.65 J"
+    },
+    {
+      "id": "8",
+      "question": "A cylinder of mass 0.200kg and moment of inertia 0.250kg/m2 slides and rolls on a horizontal surface. Find the kinetic energy of the cylinder for the given translational speed V and angular speed Ω. FOR V = 4.00m/s and = Ω = 2.00rad/s FOR V = 2.00m/s and = Ω = 4.00rad/s",
+      "answer": "0.600 J"
+    }
+  ]
+}
