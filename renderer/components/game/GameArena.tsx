@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import questions from "../../store/test.json";
+import round1 from "../../store/round1.json";
+import { useRouter } from "next/navigation";
 
 const getRandomQuestion = (currentPart: string) => {
   if (!questions[currentPart] || questions[currentPart].length === 0) {
@@ -19,6 +21,10 @@ const GameArena = () => {
     getRandomQuestion(currentPart),
   );
   const [currentRound, setCurrentRound] = useState("round1");
+  const router = useRouter();
+  const gotoHome = () => {
+    router.push("../../pages/home.tsx");
+  };
 
   const handleNext = () => {
     if (count <= 4) {
@@ -54,6 +60,12 @@ const GameArena = () => {
         </button>
         <button className="p-4 bg-gray-700 rounded-lg">Previous</button>
       </div>
+      <button
+        className="w-24 h-24 bg-gray-800 p-3 rounded-md"
+        onClick={gotoHome}
+      >
+        End quiz
+      </button>
     </div>
   );
 };
