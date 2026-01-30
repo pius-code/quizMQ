@@ -33,15 +33,11 @@ const GameArena = () => {
       console.log(count);
     } else {
       setCount(1);
-      if (partNum === 4) {
-        setPartNum(1);
-        setCurrentPart(`part${partNum}`);
-      } else {
-        setPartNum(partNum + 1);
-        setCurrentPart(`part${partNum + 1}`);
-      }
+      const nextPartNum = partNum === 4 ? 1 : partNum + 1;
+      setPartNum(nextPartNum);
+      setCurrentPart(`part${nextPartNum}`);
 
-      setquestion(getRandomQuestion(`part${partNum + 1}`));
+      setquestion(getRandomQuestion(`part${nextPartNum}`));
       console.log(count + "false else");
     }
   };
