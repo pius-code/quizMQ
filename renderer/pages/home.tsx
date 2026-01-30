@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 
 const modes = [
   { Name: "Full Competition", color: "black" },
+  { Name: "General Questions", color: "orange" },
   { Name: "Speed Race", color: "blue" },
   { Name: "True or False", color: "red" },
   { Name: "Problem of the day", color: "green" },

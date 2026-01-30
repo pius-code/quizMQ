@@ -23,25 +23,41 @@ const GameArena = () => {
   const [currentRound, setCurrentRound] = useState("round1");
   const router = useRouter();
   const gotoHome = () => {
-    router.push("../../pages/home.tsx");
+    router.push("/home");
   };
 
   const handleNext = () => {
-    if (count <= 4) {
+    if (count < 4) {
       setCount(count + 1);
       setquestion(getRandomQuestion(currentPart));
       console.log(count);
     } else {
       setCount(1);
-      setPartNum(partNum + 1);
-      setCurrentPart(`part${partNum + 1}`);
+      if (partNum === 4) {
+        setPartNum(1);
+        setCurrentPart(`part${partNum}`);
+      } else {
+        setPartNum(partNum + 1);
+        setCurrentPart(`part${partNum + 1}`);
+      }
+
       setquestion(getRandomQuestion(`part${partNum + 1}`));
       console.log(count + "false else");
     }
   };
 
   if (!question) {
-    return <div>No questions available</div>;
+    return (
+      <div>
+        No questions available
+        <button
+          className="w-24 h-24 bg-gray-800 p-3 rounded-md"
+          onClick={gotoHome}
+        >
+          End quiz
+        </button>
+      </div>
+    );
   }
 
   return (
@@ -55,10 +71,10 @@ const GameArena = () => {
         <button>Answer : {question.answer}</button>
       </div>
       <div className="w-full flex justify-between">
+        <button className="p-4 bg-gray-700 rounded-lg">Previous</button>
         <button className="p-4 bg-gray-700 rounded-lg" onClick={handleNext}>
           Next
         </button>
-        <button className="p-4 bg-gray-700 rounded-lg">Previous</button>
       </div>
       <button
         className="w-24 h-24 bg-gray-800 p-3 rounded-md"
